@@ -102,7 +102,7 @@ def main(zero, ads_id, seed, password):
         cprint(f'{zero+1}. {ads_id} = done', 'green')
 
     except Exception as ex:
-        cprint(f'{zero+1}. {ads_id} = уже сделан', 'yellow')
+        cprint(f'{zero+1}. {ads_id} = already done', 'yellow')
         driver.quit()
         requests.get(close_url)
 
