@@ -52,7 +52,9 @@ def main(zero, ads_id, seed, password):
         time.sleep(3)
         all_done = driver.find_element(By.XPATH, '//*[@class="button btn--rounded btn-primary first-time-flow__button"]').click()
         time.sleep(3)
-
+        
+        # ============================= if you don't need to add a network, delete everything below =============================
+     
         net_name = 'Optimism'
         rpc = 'https://mainnet.optimism.io'
         chain_id = 10
@@ -96,6 +98,8 @@ def main(zero, ads_id, seed, password):
         save = driver.find_element(By.XPATH, '//*[@class="button btn--rounded btn-primary"]').click()
         time.sleep(3)
 
+        # =======================================================================================================================
+        
         driver.quit()
         requests.get(close_url)
 
