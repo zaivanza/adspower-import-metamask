@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from termcolor import cprint
 import pyperclip
 
-def add_optimism(driver, name_network):
+def add_network(driver, name_network):
     try:
         networks = {
             'Optimism' : {
@@ -114,9 +114,9 @@ def main(zero, ads_id, seed, password):
 
         # =================================== if you don't need to add a networks, delete everything below ===================================
         wait_elem = WebDriverWait(driver, 7).until(EC.presence_of_element_located((By.XPATH, '//*[@class="currency-display-component__suffix"]')))
-        add_optimism(driver, 'BSC')
-        add_optimism(driver, 'Optimism')
-        add_optimism(driver, 'Arbitrum')
+        add_network(driver, 'BSC')
+        add_network(driver, 'Optimism')
+        add_network(driver, 'Arbitrum')
         # ===================================================================================================================================
 
         driver.quit()
