@@ -34,6 +34,14 @@ def add_network(driver, name_network):
             'symbol': 'BNB',
             'explorer': 'https://bscscan.com',
             },
+            
+            'Polygon' : {
+            'net_name': 'Polygon',
+            'rpc': 'https://polygon-rpc.com',
+            'chain_id': 137,
+            'symbol': 'MATIC',
+            'explorer': 'https://polygonscan.com/',
+            },
         }
 
         xpatch = '/html/body/div[1]/div/div[3]/div/div[2]/div[2]/div/div[2]/div/div[2]/div'
@@ -115,6 +123,7 @@ def main(zero, ads_id, seed, password):
         # =================================== if you don't need to add a networks, delete everything below ===================================
         wait_elem = WebDriverWait(driver, 7).until(EC.presence_of_element_located((By.XPATH, '//*[@class="currency-display-component__suffix"]')))
         add_network(driver, 'BSC')
+        add_network(driver, 'Polygon')
         add_network(driver, 'Optimism')
         add_network(driver, 'Arbitrum')
         # ===================================================================================================================================
